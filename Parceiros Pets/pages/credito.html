@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parceiros Pets - Cadastro</title>
     <link rel="stylesheet" href="/css/generico.css"> <!-- Link para o CSS da navbar -->
-    <link rel="stylesheet" href="/css/doacao.css"> 
+    <link rel="stylesheet" href="/css/pagamento.css"> 
     <link rel="shortcut icon" href="/Imagem/Logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">  <!-- Importar a fonte Anton do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
@@ -35,20 +35,24 @@
         </nav>
     </header>
 
-    <section id="doar">
-        <div id="imgs">
-           <img src="/Imagem/mulhercomgato.jpg" alt="" class="img-doacao">
-            <img src="/Imagem/adocao2.png" alt="" class="img-doacao">
-            <img src="/Imagem/adocao3.png" alt="" class="img-doacao"> 
+    <section id="pagamento">
+        <div id="cpf">
+            <h3>Confirme seu CPF/CNPJ</h3>
+            <input type="text" placeholder="Digite aqui seu CPF/CNPJ" required>
+            <p>Campo obrigatório (somente números)</p>
         </div>
-        <div id="texto-doacao">
-            <h2>Seja um Doador</h2>
-            <p>Seu apoio é essencial para garantir alimentação, cuidados veterinários e um lar temporário seguro para os animais resgatados.</p>
-            <a href="/pages/doacao-cad.html"><button class="doacao-button">Faça sua doação!</button></a>
+        <div id="credito">
+            <label for="numerocartao">Número do Cartão</label>
+            <input type="text" name="numerocartao" placeholder="Digite apenas os números sem espaço" required>
+            
+            <label for="datavalidade">Data de Validade</label>
+            <input type="date" name="datavalidade" required>
+            <a href=""><button class="copia">COPIAR NÚMERO</button></a>
         </div>
     </section>
-</body>
 
-<footer>
-    <p>&copy; 2025 Parceiros Pets. Todos os direitos reservados.</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Parceiros Pets. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/js/script.js"></script>

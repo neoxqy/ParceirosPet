@@ -18,6 +18,7 @@
     --icon-size: 30px;
     --padding-horizontal: 20px;
     --laranja: #d4824e;
+    --amarelo: #ffcc00; /* Cor amarela para o gradiente */
   }
 header {
     z-index: 999;
@@ -110,3 +111,20 @@ header .brand:hover {
     width: var(--icon-size);
     margin-right: 10px;
   }
+
+body {
+    font-family: 'Questrial', sans-serif;
+    line-height: 1.6;
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+footer {
+    background-color: var(--preto);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

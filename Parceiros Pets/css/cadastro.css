@@ -1,26 +1,3 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #006936; /* Verde principal */
-    --text-color: white;
-    --preto: #000;
-    --branco: #fff;
-    --laranja: #d4824e;
-    --padding-horizontal: 20px;
-}
-
-/* Aplicar a fonte Anton ao corpo do texto (opcional) */
-body {
-    font-family: 'Anton', sans-serif; /* Fonte Anton como padrão */
-    line-height: 1.6;
-    color: var(--preto);
-    background-color: var(--branco);
-}
 
 /* Seção de Cadastro */
 #cadastro {
@@ -140,7 +117,6 @@ body {
     border-radius: 25px; /* Bordas mais arredondadas */
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     margin-top: 20px;
     width: 100%; /* Botão ocupa toda a largura do formulário */
     font-family: 'Anton', sans-serif; /* Fonte Anton */
@@ -148,16 +124,6 @@ body {
 }
 
 .cadastrar-button:hover {
-    background-color: #b36a3a; /* Cor mais escura no hover */
-}
-
-/* Footer */
-footer {
-    background-color: var(--preto);
-    color: var(--text-color);
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    transition: filter 0.3s ease;
+    filter: brightness(70%); 
 }

@@ -1,0 +1,69 @@
+#pagamento {
+    color: var(--branco);
+    display: flex;
+    padding: 10px var(--padding-horizontal);
+    background-color: var(--primary-color); /* Fundo verde */
+    justify-content: flex-end;
+    background-image: url('/Imagem/bckgrond.jpg');
+    background-size: cover;
+    width: 210vh;
+    height: 120vh;
+    margin-top: 80px; /* Espaço para a navbar fixa */
+}
+
+#pagamento h3{
+    font-size: 40px;
+}
+
+#pagamento p{
+    font-size: 20px;
+}
+
+#qr{
+    margin: 50px;
+    margin-right: 100px;
+    margin-left: 300px;
+    justify-items: center;
+}
+
+#boleto{
+    margin: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+    justify-items: center;
+}
+#debito{
+    width: 100%;
+    height: 50%;
+}
+#credito{
+    display: flex;
+}
+
+#cpf{
+    margin: 50px;
+}
+
+input{
+    width: 100%;
+    height: 50px;
+}
+.copia {
+    background-color: var(--laranja);
+    color: var(--text-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px; /* Bordas mais arredondadas */
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    width: 100%;
+}
+:placeholder-shown{
+    font-size: 20px;
+}
+.copia:hover {
+    transition: filter 0.3s ease;
+    filter: brightness(70%); 
+}

@@ -25,3 +25,27 @@ document.addEventListener("DOMContentLoaded", function() {
       carregarComponente("navbar", "../components/navbar.html");
   }
 });
+
+document.getElementById("doacao-form").addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const metodoPagamento = document.querySelector('input[name="pagamento"]:checked');
+
+    if(metodoPagamento){
+        switch(metodoPagamento.value){
+            case "pix":
+                window.location.href = "pix.html";
+            break;
+            case "credito":
+                window.location.href = "credito.html";
+            break;
+            case "debito":
+                window.location.href = "debito.html";
+            break;
+            default:
+            break;
+        }
+    }
+})
+    
+
