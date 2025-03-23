@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Questrial', sans-serif;
   line-height: 1.6;
   color: var(--preto);
   background-color: var(--primary-color); /* Fundo verde */
@@ -53,32 +53,43 @@ header .nav-links a {
 /* Seção Sobre Nós */
 #sobre {
   padding: 40px var(--padding-horizontal);
-  background-color: var(--branco); /* Fundo branco para a seção */
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url('/Imagem/backgound.jpg');
+  background-size: cover;
+  width: 210vh;
+  height: 120vh;
+  margin-top: 80px; /* Espaço para a navbar fixa */
 }
 
 #sobre h2 {
+  font-family: 'Bevan', sans-serif;
   font-size: 32px;
   margin-bottom: 20px;
-  color: var(--primary-color);
-  text-align: center;
+  color: var(--text-color);
+  text-align: left;
 }
 
 /* Blocos de Texto */
 .texto-bloco {
-  background-color: var(--branco);
+  display: flex;
   padding: 20px;
-  margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.texto-bloco img{
+  width: 30%;
+  height: 30%;
+  border-radius: 20px;
+  
 }
 
 .texto-bloco p {
-  font-size: 16px;
+  font-family: 'Questrial', sans-serif;
+  margin-inline: 20px;
+  width: 1000px;
+  height: 30px;
+  font-size: 25px;
   line-height: 1.6;
-  color: var(--preto);
+  color: var(--text-color);
 }
 
 /* Footer */

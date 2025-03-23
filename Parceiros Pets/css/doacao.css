@@ -22,38 +22,31 @@ body {
     background-color: var(--branco);
 }
 
-/* Seção de Cadastro */
-#doacao {
-    display: flex;
-    padding: 40px var(--padding-horizontal);
+#doar {
+    padding: 10px var(--padding-horizontal);
     background-color: var(--primary-color); /* Fundo verde */
-    background-image: url('/Imagem/dog.jpg');
+    justify-content: center;
+    background-image: url('/Imagem/dogsitdown.jpg');
     background-size: cover;
-    background-position: center;
-    min-height: calc(100vh - 80px); /* Altura total menos a altura da navbar */
+    width: 210vh;
+    height: 120vh;
     margin-top: 80px; /* Espaço para a navbar fixa */
 }
-
-.doacao-container {
-    text-align:center;
-    background-color: #006936;
-    padding: 30px;
-    border-radius: 20px;
-    width: 400px; /* Largura do formulário */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    color: var(--branco); /* Cor do texto dentro do container */
+#imgs{
+    display: flex;
+}
+#doar img{
+    width: 30%;
+    height: 30%;
+    margin-inline: 20px;
 }
 
-#titulo{
-    background-color: white;
-    color: #006936;
+.img-doacao{
     border-radius: 20px;
 }
 
-/* Cabeçalho do formulário */
 #texto-doacao{
-    padding: 100px;
-    padding-right: 400px;
+    margin-top: 100px;
     width: 1100px;
     height: 230px;
 
@@ -69,65 +62,6 @@ body {
     color: #006936;
 }
 
-input[type="radio"] {
-    visibility: hidden;
-}
-
-input[type="radio"] + label img {
-    width: 50px; 
-    height: 50px;
-    transition: filter 0.3s ease; 
-    margin-inline: 25px;
-}
-
-input[type="radio"]:checked + label img {
-    filter: brightness(50%); 
-}
-
-#pagamento{
-    justify-content: center;
-    display: flex;
-}
-/* Formulário de Cadastro */
-#doacao-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.form-group label {
-    font-size: 16px;
-    color: var(--branco); /* Texto branco para contraste */
-    font-weight: bold;
-    letter-spacing: 1px; /* Espaçamento entre letras */
-}
-
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 25px; /* Bordas mais arredondadas */
-    font-size: 16px;
-    outline: none; /* Remove a borda padrão ao focar */
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus {
-    border-color: var(--laranja); /* Cor da borda ao focar */
-}
-
-/* Placeholder estilizado */
-.form-group input::placeholder {
-    color: #999; /* Cor do placeholder */
-    font-style: italic; /* Texto em itálico */
-}
-
 .doacao-button {
     background-color: var(--laranja);
     color: var(--text-color);
@@ -138,7 +72,6 @@ input[type="radio"]:checked + label img {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 20px;
-    width: 100%; /* Botão ocupa toda a largura do formulário */
     letter-spacing: 1px; /* Espaçamento entre letras */
 }
 

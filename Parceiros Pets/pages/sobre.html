@@ -3,35 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parceiros Pets - Sobre Nós</title>
-    <link rel="stylesheet" href="/css/sobre.css">
+    <title>Parceiros Pets - Cadastro</title>
+    <link rel="stylesheet" href="/css/navbar.css"> <!-- Link para o CSS da navbar -->
+    <link rel="stylesheet" href="/css/sobre.css"> 
+    <link rel="shortcut icon" href="/Imagem/Logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">  <!-- Importar a fonte Anton do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <!-- Navbar -->
     <header>
-        <nav>
-            <div class="logo">Parceiros Pets</div>
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="adotar.html">Adotar</a></li>
-                <li><a href="doacao.html">Doação</a></li>
-                <li><a href="voluntario.html">Voluntário</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="login.html">Login</a></li>
+        <div class="logo"> 
+            <img src="/Imagem/Logo.png" alt="Logo da Pet's Parceiros">
+            <a class="brand" href="/pages/home.html">PARCEIROS <br> PETS</a>
+        </div>
+        <nav class="navigation" id="navMenu" bevan="Menu principal">
+            <ul class="navigation-items">
+                <li><a href="/pages/sobre.html">SOBRE NÓS</a></li>
+                <li><a href="/pages/adotar.html">ADOTAR</a></li>
+                <li><a href="/pages/doacao.html">DOAÇÃO</a></li>
+                <li><a href="/pages/voluntario.html">VOLUNTARIO</a></li>
             </ul>
+            <div class="icons">
+                <a href="/pages/cadastro.html"><img src="/Imagem/Perfil.svg" alt="Perfil"></a>
+                <button class="menu-btn" aria-label="Abrir menu">
+                    <img src="/Imagem/Menu.svg" alt="Abrir Menu" id="menuToggle">
+                </button>
+            </div>
         </nav>
     </header>
 
     <section id="sobre">
-        <h2>Sobre Nós</h2>
+        <h2>Sobre Nós!</h2>
 
         <!-- Bloco 1 -->
         <div class="texto-bloco">
             <p>A Parceiros Pet é uma ONG dedicada à proteção e bem-estar dos animais, atuando na arrecadação de fundos para castrações gratuitas e promovendo campanhas educativas sobre adoção responsável. Nosso objetivo é reduzir o abandono e garantir melhores condições de vida para os animais em situação de vulnerabilidade. A organização incentiva a participação da comunidade por meio de doações, adoções e conscientização, reforçando a importância do amor e respeito aos animais.</p>
+            <img src="/Imagem/sobreNos2.jpg" alt="">
         </div>
 
         <!-- Bloco 2 -->
         <div class="texto-bloco">
+            <img src="/Imagem/sobreNos1.jpg" alt="">
             <p>Além disso, trabalhamos em estreita colaboração com veterinários, abrigos e outras organizações para promover a saúde e a segurança dos animais, proporcionando atendimento médico adequado e, sempre que possível, realocação para um lar definitivo.</p>
         </div>
 
