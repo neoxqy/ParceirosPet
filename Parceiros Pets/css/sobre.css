@@ -1,0 +1,93 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #006936; /* Verde principal */
+  --text-color: white;
+  --logo-size: 50px;
+  --icon-size: 30px;
+  --padding-horizontal: 20px;
+  --preto: #000;
+  --branco: #fff;
+  --laranja: #d4824e;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--preto);
+  background-color: var(--primary-color); /* Fundo verde */
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px var(--padding-horizontal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: var(--logo-size);
+  font-weight: bold;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header .nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--icon-size);
+}
+
+/* Seção Sobre Nós */
+#sobre {
+  padding: 40px var(--padding-horizontal);
+  background-color: var(--branco); /* Fundo branco para a seção */
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#sobre h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Blocos de Texto */
+.texto-bloco {
+  background-color: var(--branco);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.texto-bloco p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--preto);
+}
+
+/* Footer */
+footer {
+  background-color: var(--preto);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

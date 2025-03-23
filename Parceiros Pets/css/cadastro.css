@@ -1,0 +1,163 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #006936; /* Verde principal */
+    --text-color: white;
+    --preto: #000;
+    --branco: #fff;
+    --laranja: #d4824e;
+    --padding-horizontal: 20px;
+}
+
+/* Aplicar a fonte Anton ao corpo do texto (opcional) */
+body {
+    font-family: 'Anton', sans-serif; /* Fonte Anton como padrão */
+    line-height: 1.6;
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+/* Seção de Cadastro */
+#cadastro {
+    display: flex;
+    justify-content: flex-end; /* Alinhar o formulário à direita */
+    align-items: center;
+    padding: 40px var(--padding-horizontal);
+    background-color: var(--primary-color); /* Fundo verde */
+    background-image: url('/Imagem/cadastro.jpg');
+    min-height: calc(100vh - 80px); /* Altura total menos a altura da navbar */
+    margin-top: 80px; /* Espaço para a navbar fixa */
+}
+
+.cadastro-container {
+    background-image: linear-gradient(
+        to bottom, /* Direção do degradê (de cima para baixo) */
+        #1aad64,   /* Tom mais claro de verde (topo) */
+        #016032    /* Tom mais escuro de verde (base) */
+    );
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px; /* Largura do formulário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    color: var(--branco); /* Cor do texto dentro do container */
+}
+
+/* Cabeçalho do formulário */
+#cadastro h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--branco); /* Texto branco para contraste */
+    text-align: center;
+    font-family: 'Anton', sans-serif; /* Fonte Anton */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+/* Formulário de Cadastro */
+#cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: var(--branco); /* Texto branco para contraste */
+    font-weight: bold;
+    font-family: 'Anton', sans-serif; /* Fonte Anton */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Bordas mais arredondadas */
+    font-size: 16px;
+    outline: none; /* Remove a borda padrão ao focar */
+    transition: border-color 0.3s ease;
+    font-family: 'Anton', sans-serif; /* Fonte Anton */
+}
+
+.form-group input:focus {
+    border-color: var(--laranja); /* Cor da borda ao focar */
+}
+
+/* Placeholder estilizado */
+.form-group input::placeholder {
+    color: #999; /* Cor do placeholder */
+    font-style: italic; /* Texto em itálico */
+}
+
+/* Ícones de login social */
+.social-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-login p {
+    font-size: 14px;
+    color: var(--branco);
+    margin-bottom: 10px;
+    font-family: 'Anton', sans-serif; /* Fonte Anton */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os ícones */
+}
+
+.social-icon img {
+    width: 40px; /* Tamanho dos ícones */
+    height: 40px;
+    border-radius: 50%; /* Ícones redondos */
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Botão de Cadastrar */
+.cadastrar-button {
+    background-color: var(--laranja);
+    color: var(--text-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px; /* Bordas mais arredondadas */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%; /* Botão ocupa toda a largura do formulário */
+    font-family: 'Anton', sans-serif; /* Fonte Anton */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+.cadastrar-button:hover {
+    background-color: #b36a3a; /* Cor mais escura no hover */
+}
+
+/* Footer */
+footer {
+    background-color: var(--preto);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-color: #006936;
+    --text-color: white;
+    --logo-size: 50px;
+    --icon-size: 30px;
+    --padding-horizontal: 20px;
+    --preto: #000;
+    --branco: #fff;
+    --laranja: #d4824e;
+    --amarelo: #ffcc00; /* Cor amarela para o gradiente */
+  }
