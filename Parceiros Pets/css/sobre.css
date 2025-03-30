@@ -1,36 +1,10 @@
-/* Header */
-header {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  padding: 10px var(--padding-horizontal);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .logo {
-  font-size: var(--logo-size);
-  font-weight: bold;
-}
-
-header .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-header .nav-links a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: var(--icon-size);
-}
 
 /* Seção Sobre Nós */
 #sobre {
   padding: 40px var(--padding-horizontal);
   background-image: url('/Imagem/backgound.jpg');
   background-size: cover;
-  width: 210vh;
+  width: 100%;
   height: 120vh;
   margin-top: 80px; /* Espaço para a navbar fixa */
 }

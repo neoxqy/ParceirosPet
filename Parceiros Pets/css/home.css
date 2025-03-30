@@ -33,7 +33,7 @@ header .nav-links a {
 
 /* Hero Section */
 #hero {
-  background-image: url('/Imagem/home.png'); /* Substitua pelo caminho da sua imagem */
+  background-image: url('/Imagem/home.png'); 
   background-size: cover;
   background-position: center;
   height: 100vh;

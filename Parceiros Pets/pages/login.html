@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parceiros Pets - Login</title>
-    <link rel="stylesheet" href="/css/generico.css"> <!-- Link para o CSS da navbar -->
     <link rel="stylesheet" href="/css/login.css"> <!-- Link para o CSS do login -->
     <link rel="shortcut icon" href="/Imagem/Logo.png" type="image/x-icon">
     <!-- Importar a fonte Anton do Google Fonts -->
@@ -13,24 +12,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <div class="logo"> 
-            <img src="/Imagem/Logo.png" alt="Logo da Pet's Parceiros">
-            <a class="brand" href="/pages/home.html">PARCEIROS <br> PETS</a>
-        </div>
-        <nav class="navigation" id="navMenu" bevan="Menu principal">
-            <ul class="navigation-items">
-                <li><a href="/pages/sobre.html">SOBRE NÓS</a></li>
-                <li><a href="/pages/adotar.html">ADOTAR</a></li>
-                <li><a href="/pages/doacao.html">DOAÇÃO</a></li>
-                <li><a href="/pages/voluntario.html">VOLUNTARIO</a></li>
-            </ul>
-            <div class="icons">
-                <a href="/pages/cadastro.html"><img src="/Imagem/Perfil.svg" alt="Perfil"></a>
-                <button class="menu-btn" aria-label="Abrir menu">
-                    <img src="/Imagem/Menu.svg" alt="Abrir Menu" id="menuToggle">
-                </button>
-            </div>
-        </nav>
+     <div id="navbar"></div>
     </header>
 
     <!-- Seção de Login -->
@@ -48,30 +30,41 @@
                     <input type="password" id="senha" name="senha" placeholder="Senha" required>
                 </div>
 
-                <!-- Ícones de login social -->
                 <div class="social-login">
-                    <p>Ou faça login com:</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon">
-                            <img src="/Imagem/icons8-google-logo-48.png" alt="Login com Google">
-                        </a>
-                        <a href="#" class="social-icon">
-                            <img src="/Imagem/icons8-telefone-celular-50.png" alt="Outro login">
-                        </a>
+                    <div class="linha-container">
+                        <div class="linha">
+                            <div class="espaco"></div>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="social-login">
+                        <div class="social-divider">
+                            <div class="divider-line"></div>
+                            <span class="divider-text">OU</span>
+                            <div class="divider-line"></div>
+                        </div>
+                        <div class="social-icons">
+                            <div class="social-icon-wrapper">
+                                <a href="#" class="social-icon">
+                                    <img src="/Imagem/Google.svg" alt="Login com Google">
+                                </a>
+                            </div>
+                            <div class="social-icon-wrapper">
+                                <a href="#" class="social-icon">
+                                    <img src="/Imagem/icons8-facebook-novo-50.png" alt="Login com Facebook">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
                 <button type="submit" class="entrar-button">Entrar</button>
             </form>
+            <div class="cadastrar">
+                <span> Não tem conta?</span> <a href="/pages/cadastro.html"> Cadastre-se</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Parceiros Pets. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="/js/navbar.js"></script> <!-- Script da navbar -->
-    <script src="/js/login.js"></script> <!-- Script do login (se necessário) -->
+    
+     <script src="/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,95 @@
+:root {
+    --branco: #ffffff;
+    --laranja: #FFA500;
+    --verde-escuro: #006936;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--branco);
+    min-height: 100vh;
+    background-image: url('/Imagem/backback.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Estilo do título principal */
+h1 {
+    color: var(--verde-escuro);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo do formulário */
+.confirm-form h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Botões */
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn-sim, .btn-nao {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 40%;
+}
+
+.btn-sim {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.btn-nao {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.btn-sim:hover {
+    background-color: #004d27;
+    transform: scale(1.05);
+}
+
+.btn-nao:hover {
+    background-color: #e69500;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .button-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-sim, .btn-nao {
+        width: 100%;
+    }
+}

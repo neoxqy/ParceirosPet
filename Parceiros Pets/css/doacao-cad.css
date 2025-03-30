@@ -1,122 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Questrial&display=swap');
+
+:root {
+    --branco: #ffffff;
+    --laranja: #FFA500;
+    --verde-escuro: #006936;
+}
+
+/* Estrutura Principal */
 #doacao {
     display: flex;
-    padding: 40px var(--padding-horizontal);
-    background-color: var(--primary-color); /* Fundo verde */
-    background-image: url('/Imagem/dog.jpg');
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 5%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.bg {
+    background-image: url('/Imagem/bgDoar.png');
     background-size: cover;
     background-position: center;
-    min-height: calc(100vh - 80px); /* Altura total menos a altura da navbar */
-    margin-top: 80px; /* Espaço para a navbar fixa */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
 }
 
-.doacao-container {
-    text-align:center;
-    background-color: #006936;
-    padding: 30px;
-    border-radius: 20px;
-    width: 400px; /* Largura do formulário */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    color: var(--branco); /* Cor do texto dentro do container */
+/* Imagem do Cachorro  */
+.dog {
+    background-image: url('/Imagem/dog.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
-#titulo{
-    background-color: white;
-    color: #006936;
-    border-radius: 20px;
+/* Texto à Esquerda */
+#texto-doacao {
+    width: 35%;
+    padding-right: 50px;
 }
 
-#texto-doacao{
-    padding: 100px;
-    padding-right: 400px;
-    width: 1100px;
-    height: 230px;
-}
-#texto-doacao p{
-    font-size: 30px;
-    font-family: 'Questrial', sans-serif;
-}
-
-#texto-doacao h2{
-    font-size: 50px;
+#texto-doacao h2 {
+    font-size: 36px;
     font-family: 'Bevan', sans-serif;
-    color: #006936;
+    color: var(--verde-escuro);
+    margin-bottom: 20px;
 }
 
-/* Cabeçalho do formulário */
-
-input[type="radio"] {
-    visibility: hidden;
+#texto-doacao p {
+    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
+    line-height: 1.5;
 }
 
-input[type="radio"] + label img {
-    width: 50px; 
-    height: 50px;
-    transition: filter 0.3s ease; 
-    margin-inline: 25px;
+/* Formulário Redondinho à Direita */
+.doacao-container {
+    background-color: var(--verde-escuro);
+    padding: 25px;
+    margin-top: 80px;
+    border-radius: 35px; 
+    width: 350px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: var(--branco);
+    z-index: 1;
 }
 
-input[type="radio"]:checked + label img {
-    filter: brightness(50%); 
+#titulo {
+    background-color: var(--branco);
+    color: var(--verde-escuro);
+    border-radius: 20px;
+    padding: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 22px;
 }
 
-#pagamento{
-    justify-content: center;
-    display: flex;
-}
-/* Formulário de Cadastro */
+/* Elementos do Formulário */
 #doacao-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.form-group label {
-    font-size: 16px;
-    color: var(--branco); /* Texto branco para contraste */
-    font-weight: bold;
-    letter-spacing: 1px; /* Espaçamento entre letras */
+    gap: 10px;
 }
 
 .form-group input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 25px; /* Bordas mais arredondadas */
+    border: none;
+    border-radius: 25px;
     font-size: 16px;
-    outline: none; /* Remove a borda padrão ao focar */
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus {
-    border-color: var(--laranja); /* Cor da borda ao focar */
-}
-
-/* Placeholder estilizado */
-.form-group input::placeholder {
-    color: #999; /* Cor do placeholder */
-    font-style: italic; /* Texto em itálico */
+    background-color: #f0f0f0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .doacao-button {
     background-color: var(--laranja);
-    color: var(--text-color);
-    padding: 15px 30px;
+    color: white;
+    padding: 12px;
     border: none;
-    border-radius: 25px; /* Bordas mais arredondadas */
-    font-size: 18px;
+    border-radius: 25px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-    width: 100%; /* Botão ocupa toda a largura do formulário */
-    letter-spacing: 1px; /* Espaçamento entre letras */
+    margin-top: 10px;
+    transition: all 0.3s;
 }
 
 .doacao-button:hover {
-    background-color: #b36a3a; /* Cor mais escura no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ícones de Pagamento */
+#pagamento {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; 
+}
+
+.pagamento-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagamento-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    width: 60px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s ease;
+    border: 2px solid transparent; 
+}
+
+.pagamento-option img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.pagamento-option p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Efeito de hover para as opções */
+.pagamento-option:hover {
+    background-color: var(--laranja);
+    transform: scale(1.05);
+    border-color: var(--laranja);
+}
+
+.pagamento-option.selected {
+    background-color: var(--laranja);
+    color: white;
+    border-color: var(--laranja);
+}
+
+/* Efeito de clique (active) */
+.pagamento-option:active {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #pagamento {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pagamento-option {
+        width: 60%;
+        margin-bottom: 15px;
+    }
 }

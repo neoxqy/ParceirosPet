@@ -54,3 +54,10 @@
     transition: filter 0.3s ease;
     filter: brightness(70%); 
 }
+html, body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
