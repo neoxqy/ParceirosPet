@@ -23,14 +23,48 @@
             <input type="text" placeholder="Digite aqui seu CPF/CNPJ" required>
             <p>Campo obrigatório (somente números)</p>
         </div>
+
+        <form action="" id="pagar">
         <div id="credito">
-            <label for="numerocartao">Número do Cartão</label>
-            <input type="text" name="numerocartao" placeholder="Digite apenas os números sem espaço" required>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="numerocartao">Número do Cartão</label>
+                    <input type="text" id="numerocartao" name="numerocartao" placeholder="Digite apenas os números sem espaço" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="datavalidade">Data de Validade</label>
+                    <input type="date" id="datavalidade" name="datavalidade" required>
+                </div>
+            </div>
             
-            <label for="datavalidade">Data de Validade</label>
-            <input type="date" name="datavalidade" required>
-            <a href=""><button class="copia">COPIAR NÚMERO</button></a>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nometitular">Nome do Titular do cartão</label>
+                    <input type="text" id="nometitular" name="nometitular" placeholder="Como escrito no cartão" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="3 dígitos" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="parcelamento">Parcelamento</label>
+                    <input list="vezes" id="parcelamento" name="parcelamento" required>
+                    <datalist id="vezes">
+                        <option value="À vista">
+                        <option value="2x">
+                        <option value="3x">
+                    </datalist>
+                </div>
+            </div>
+
+            <button type="submit" class="copia">FINALIZAR PAGAMENTO</button>
         </div>
+        </form>
     </section>
 
     <footer>

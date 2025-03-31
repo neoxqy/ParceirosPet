@@ -40,3 +40,6 @@
   line-height: 1.6;
   color: var(--text-color);
 }
+html, body {
+  scrollbar-width: none;
+}

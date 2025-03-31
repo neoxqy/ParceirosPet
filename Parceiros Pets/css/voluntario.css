@@ -231,6 +231,10 @@ body::after {
     transform: translateY(1px);
 }
 
+html, body {
+    scrollbar-width: none;
+}
+
 @media (max-width: 992px) {
     .formulario-container {
         grid-template-columns: 1fr;

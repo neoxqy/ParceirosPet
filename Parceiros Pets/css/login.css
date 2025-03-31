@@ -15,10 +15,7 @@
     left: 0; /* Garante que a imagem comece na esquerda da página */
 }
 html, body {
-    overflow: hidden;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    scrollbar-width: none;
 }
 
 .login-container {

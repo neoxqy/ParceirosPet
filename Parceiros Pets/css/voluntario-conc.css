@@ -81,3 +81,7 @@ p {
     object-fit: contain;
     z-index: 1;
 }
+
+html, body {
+    scrollbar-width: none;
+}
