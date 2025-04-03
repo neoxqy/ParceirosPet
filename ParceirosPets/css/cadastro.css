@@ -1,0 +1,232 @@
+
+/* Estrutura Principal */
+#cadastro {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px var(--padding-horizontal);
+    margin-top: 70px;
+}
+
+.bg {
+    background-image: url('../Imagem/cadastro.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Container do Formulário (Reduzido) */
+.cadastro-container {
+    background-image: linear-gradient(to bottom, #1aad64, #016032);
+    padding: 25px;
+    border-radius: 35px;
+    width: 380px;
+    height: 580px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--branco);
+    margin-top: 40px;
+}
+
+/* Cabeçalho */
+#cadastro h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--branco);
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Formulário */
+#cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: var(--branco);
+    font-weight: bold;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    margin-left: 2rem;
+}
+
+.form-group input {
+    width: 80%;
+    padding: 10px;
+    margin-left: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.form-group input:focus {
+    border-color: var(--laranja);
+}
+
+.form-group input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Seção Social */
+.social-login {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.linha-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linha {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.linha::before,
+.linha::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid rgb(229, 229, 229);
+}
+
+.espaco {
+    width: 50px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-icon img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+#Google {
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 90%;
+    padding-right: 15px;
+}
+
+#phone{
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 80%;
+}
+
+/* Botão */
+.cadastrar-button {
+    background-color: var(--laranja);
+    color: var(--text-color);
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 85%;
+    margin: 0 auto;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    transition: filter 0.3s ease;
+}
+
+.cadastrar-button:hover {
+    filter: brightness(90%);
+}
+
+/* Link de Login */
+.logar {
+    text-align: center;
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+.logar a, span {
+    color: var(--branco);
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.logar a:hover {
+    color: var(--laranja);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .cadastro-container {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+    
+    #cadastro h2 {
+        font-size: 24px;
+    }
+    
+    .form-group input {
+        width: 90%;
+        margin-left: 1rem;
+    }
+    
+    #Google {
+        padding-right: 120px;
+    }
+}
+
+html, body {
+    scrollbar-width: none;
+}
+
+.mensagem {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.mensagem.sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.mensagem.erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

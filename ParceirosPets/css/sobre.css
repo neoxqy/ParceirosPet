@@ -1,0 +1,45 @@
+
+/* Seção Sobre Nós */
+#sobre {
+  padding: 40px var(--padding-horizontal);
+  background-image: url('../Imagem/backgound.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 120vh;
+  margin-top: 80px; /* Espaço para a navbar fixa */
+}
+
+#sobre h2 {
+  font-family: 'Bevan', sans-serif;
+  font-size: 32px;
+  margin-left: 40px;
+  color: var(--text-color);
+  text-align: left;
+}
+
+/* Blocos de Texto */
+.texto-bloco {
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.texto-bloco img{
+  width: 30%;
+  height: 30%;
+  border-radius: 20px;
+  
+}
+
+.texto-bloco p {
+  font-family: 'Questrial', sans-serif;
+  margin-inline: 20px;
+  width: 1000px;
+  height: 30px;
+  font-size: 25px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+html, body {
+  scrollbar-width: none;
+}

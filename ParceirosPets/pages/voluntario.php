@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parceiros Pets - Voluntário</title>
+    <link rel="stylesheet" href="../css/voluntario.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar"></div>
+    </header>
+    
+    <div class="formulario-container">
+        <!-- Seção do Título à Esquerda -->
+        <div class="titulo-section">
+            <h1>Formulário de Voluntário</h1>
+            <p>Informe todos os dados pedidos, para concluir e ser voluntário da ONG</p>
+        </div>
+
+        <div class="imagem-direita">
+            <img src="../Imagem/cats.jpg" alt="Voluntariado com animais">
+        </div>
+       
+        <!-- Formulário à Direita -->
+        <div class="form-section">
+            <h2>Preencha abaixo</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rua">Nome da Rua</label>
+                    <input type="text" id="rua" name="rua" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="uf">UF</label>
+                    <select id="uf" name="uf" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre (AC)</option>
+                        <option value="AL">Alagoas (AL)</option>
+                        <option value="AP">Amapá (AP)</option>
+                        <option value="AM">Amazonas (AM)</option>
+                        <option value="BA">Bahia (BA)</option>
+                        <option value="CE">Ceará (CE)</option>
+                        <option value="DF">Distrito Federal (DF)</option>
+                        <option value="ES">Espírito Santo (ES)</option>
+                        <option value="GO">Goiás (GO)</option>
+                        <option value="MA">Maranhão (MA)</option>
+                        <option value="MT">Mato Grosso (MT)</option>
+                        <option value="MS">Mato Grosso do Sul (MS)</option>
+                        <option value="MG">Minas Gerais (MG)</option>
+                        <option value="PA">Pará (PA)</option>
+                        <option value="PB">Paraíba (PB)</option>
+                        <option value="PR">Paraná (PR)</option>
+                        <option value="PE">Pernambuco (PE)</option>
+                        <option value="PI">Piauí (PI)</option>
+                        <option value="RJ">Rio de Janeiro (RJ)</option>
+                        <option value="RN">Rio Grande do Norte (RN)</option>
+                        <option value="RS">Rio Grande do Sul (RS)</option>
+                        <option value="RO">Rondônia (RO)</option>
+                        <option value="RR">Roraima (RR)</option>
+                        <option value="SC">Santa Catarina (SC)</option>
+                        <option value="SP">São Paulo (SP)</option>
+                        <option value="SE">Sergipe (SE)</option>
+                        <option value="TO">Tocantins (TO)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ong">Selecionar ONG</label>
+                    <select id="ong" name="ong" required>
+                        <option value="">Selecione</option>
+                        <option value="ong1">ONG Parceiros Pets</option>
+                       
+                    </select>
+                </div>
+                
+                <button type="button" class="botao-continuar" onclick="window.location.href='voluntario-conc.html'">Continuar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

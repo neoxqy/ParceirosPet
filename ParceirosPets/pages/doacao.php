@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parceiros Pets - Cadastro</title>
+    <link rel="stylesheet" href="../css/doacao.css"> 
+    <link rel="shortcut icon" href="../Imagem/Logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">  <!-- Importar a fonte Anton do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   
+    <header>
+        <div id="navbar"></div>
+    </header>
+
+    <section id="doar">
+        <div id="imgs">
+           <img src="../Imagem/mulhercomgato.jpg" alt="" class="img-doacao">
+            <img src="../Imagem/adocao2.png" alt="" class="img-doacao">
+            <img src="../Imagem/adocao3.png" alt="" class="img-doacao"> 
+        </div>
+        <div id="texto-doacao">
+            <h2>Seja um Doador</h2>
+            <p>Seu apoio é essencial para garantir alimentação, cuidados veterinários e um lar temporário seguro para os animais resgatados.</p>
+            <a href="/ParceirosPets/pages/doacao-cad.php"><button class="doacao-button">Faça sua doação!</button></a>
+        </div>
+    </section>
+    <script src="../js/script.js"></script>
+</body>

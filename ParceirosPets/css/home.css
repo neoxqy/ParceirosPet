@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--preto);
+  
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px var(--padding-horizontal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: var(--logo-size);
+  font-weight: bold;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header .nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--icon-size);
+}
+
+/* Hero Section */
+#hero {
+  background-image: url('../Imagem/home.png'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start; /* Alinhar conteúdo à esquerda */
+  align-items: center;
+  text-align: left; /* Texto alinhado à esquerda */
+  color: var(--text-color);
+  padding-left: var(--padding-horizontal); /* Espaçamento à esquerda */
+}
+
+#hero .hero-content {
+  
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px; /* Limitar largura do conteúdo */
+}
+
+#hero h1 {
+  font-family: 'Bevan', serif; /* Aplicar a fonte Bevan */
+  font-weight: 400; /* Peso da fonte */
+  font-size: 40px; /* Tamanho da fonte */
+  line-height: 50px; /* Altura da linha */
+  letter-spacing: 0; /* Espaçamento entre letras */
+  text-transform: uppercase; /* Texto em maiúsculas */
+  margin-bottom: 25px; /* Espaçamento abaixo do título */
+}
+
+/* Botão "ADOTE AQUI!" */
+.cta-button {
+  background: linear-gradient(to right, var(--amarelo), var(--laranja)); /* Gradiente de amarelo para laranja */
+  font-family: Bevan;
+  color: var(--text-color);
+  padding: 15px 50px; /* Mais comprido */
+  text-decoration: none;
+  border-radius: 50px; /* Bordas completamente arredondadas */
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Para garantir que o padding funcione corretamente */
+  text-align: center;
+  border: none; /* Remover borda padrão */
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: linear-gradient(to right, #e6b800, #b36a3a); /* Gradiente mais escuro no hover */
+}

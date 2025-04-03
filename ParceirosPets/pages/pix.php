@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parceiros Pets - Cadastro</title>
+    <link rel="stylesheet" href="../css/pagamento.css"> 
+    <link rel="shortcut icon" href="../Imagem/Logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">  <!-- Importar a fonte Anton do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div id="navbar"></div>
+    </header>
+
+    <section id="pagamento">
+        <div id="cpf">
+            <h3>Confirme seu CPF/CNPJ</h3>
+            <input type="text" placeholder="Digite aqui seu CPF/CNPJ" required>
+            <p>Campo obrigatório (somente números)</p>
+        </div>
+        <div id="qr">
+            <h3>Escaneie o QR Code</h3>
+            <p>para pagar com Pix:</p>
+            <img src="../Imagem/qrcode.png" alt="">
+            <br>
+            <a href=""><button class="copia">PIX COPIA E COLA</button></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Parceiros Pets. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

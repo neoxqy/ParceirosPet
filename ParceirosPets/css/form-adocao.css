@@ -1,0 +1,179 @@
+:root {
+    --branco: #ffffff;
+    --laranja: #FFA500;
+    --verde-escuro: #006936;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--branco);
+    min-height: 100vh;
+    background-image: url('../Imagem/backback.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Layout de 3 colunas REAJUSTADO */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, auto) 1fr;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  /* Seção ESQUERDA - Título */
+  .left-section {
+    grid-column: 1;
+    padding-left: 50px;
+    max-width: 600px;
+  }
+  
+  .left-section h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    text-align: left;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 800;
+  }
+  
+  .left-section h2 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 20px;
+  }
+  
+  /* Seção CENTRAL - Imagem */
+  .center-section {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 60px;
+}
+
+.dog-image {
+    max-width: 320px;
+    height: 700px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+  
+  /* Seção DIREITA - Formulário */
+  .right-section {
+    grid-column: 3;
+    padding-right: 50px;
+    justify-self: end;
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .adoption-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .adoption-form h3,
+  .input-group input,
+  .botao-adotar {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--verde-escuro);
+    background-color: var(--branco);
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .adoption-form h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  .input-group input::placeholder {
+    color: #999;
+    opacity: 1;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 105, 54, 0.3);
+  }
+  
+  .botao-adotar {
+    background-color: var(--laranja) !important;
+    color: var(--branco) !important;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  
+  .botao-adotar:hover {
+    background-color: #e69500 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsividade Aprimorada */
+  @media (max-width: 1200px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+    }
+  
+    .left-section, 
+    .center-section, 
+    .right-section {
+      width: 100%;
+      max-width: 600px;
+      padding: 0 20px;
+    }
+  
+    .left-section h1 {
+      text-align: center;
+      font-size: 2.8rem;
+    }
+  
+    .left-section h2 {
+      text-align: center;
+    }
+  
+    .dog-image {
+      max-width: 280px;
+    }
+  }
