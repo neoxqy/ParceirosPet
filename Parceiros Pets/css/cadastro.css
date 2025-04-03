@@ -1,45 +1,50 @@
 
-/* Seção de Cadastro */
+/* Estrutura Principal */
 #cadastro {
     display: flex;
-    justify-content: flex-end; /* Alinhar o formulário à direita */
-    align-items: center;
-    padding: 40px var(--padding-horizontal);
-    background-color: var(--primary-color); /* Fundo verde */
+    justify-content: flex-end;
+    padding: 30px var(--padding-horizontal);
+    margin-top: 70px;
+}
+
+.bg {
     background-image: url('/Imagem/cadastro.jpg');
-    min-height: calc(100vh - 80px); /* Altura total menos a altura da navbar */
-    margin-top: 80px; /* Espaço para a navbar fixa */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
+/* Container do Formulário (Reduzido) */
 .cadastro-container {
-    background-image: linear-gradient(
-        to bottom, /* Direção do degradê (de cima para baixo) */
-        #1aad64,   /* Tom mais claro de verde (topo) */
-        #016032    /* Tom mais escuro de verde (base) */
-    );
-    padding: 30px;
-    border-radius: 10px;
-    width: 400px; /* Largura do formulário */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    color: var(--branco); /* Cor do texto dentro do container */
+    background-image: linear-gradient(to bottom, #1aad64, #016032);
+    padding: 25px;
+    border-radius: 35px;
+    width: 380px;
+    height: 580px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--branco);
+    margin-top: 40px;
 }
 
-/* Cabeçalho do formulário */
+/* Cabeçalho */
 #cadastro h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: var(--branco); /* Texto branco para contraste */
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--branco);
     text-align: center;
-    font-family: 'Anton', sans-serif; /* Fonte Anton */
-    text-transform: uppercase; /* Texto em maiúsculas */
-    letter-spacing: 2px; /* Espaçamento entre letras */
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Formulário de Cadastro */
+/* Formulário */
 #cadastro-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .form-group {
@@ -50,80 +55,158 @@
 
 .form-group label {
     font-size: 16px;
-    color: var(--branco); /* Texto branco para contraste */
+    color: var(--branco);
     font-weight: bold;
-    font-family: 'Anton', sans-serif; /* Fonte Anton */
-    letter-spacing: 1px; /* Espaçamento entre letras */
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    margin-left: 2rem;
 }
 
 .form-group input {
-    width: 100%;
-    padding: 12px;
+    width: 80%;
+    padding: 10px;
+    margin-left: 2rem;
     border: 1px solid #ccc;
-    border-radius: 25px; /* Bordas mais arredondadas */
+    border-radius: 25px;
     font-size: 16px;
-    outline: none; /* Remove a borda padrão ao focar */
+    outline: none;
     transition: border-color 0.3s ease;
-    font-family: 'Anton', sans-serif; /* Fonte Anton */
+    font-family: Arial, sans-serif;
 }
 
 .form-group input:focus {
-    border-color: var(--laranja); /* Cor da borda ao focar */
+    border-color: var(--laranja);
 }
 
-/* Placeholder estilizado */
 .form-group input::placeholder {
-    color: #999; /* Cor do placeholder */
-    font-style: italic; /* Texto em itálico */
+    color: #999;
+    font-style: italic;
 }
 
-/* Ícones de login social */
+/* Seção Social */
 .social-login {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
-.social-login p {
-    font-size: 14px;
-    color: var(--branco);
-    margin-bottom: 10px;
-    font-family: 'Anton', sans-serif; /* Fonte Anton */
-    letter-spacing: 1px; /* Espaçamento entre letras */
+.linha-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linha {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.linha::before,
+.linha::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid rgb(229, 229, 229);
+}
+
+.espaco {
+    width: 50px;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espaçamento entre os ícones */
+    gap: 12px;
+    margin-top: 15px;
 }
 
 .social-icon img {
-    width: 40px; /* Tamanho dos ícones */
-    height: 40px;
-    border-radius: 50%; /* Ícones redondos */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
 .social-icon img:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.1);
 }
 
-/* Botão de Cadastrar */
+#Google {
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 90%;
+    padding-right: 15px;
+}
+
+#phone{
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 80%;
+}
+
+/* Botão */
 .cadastrar-button {
     background-color: var(--laranja);
     color: var(--text-color);
-    padding: 15px 30px;
+    padding: 12px;
     border: none;
-    border-radius: 25px; /* Bordas mais arredondadas */
-    font-size: 18px;
+    border-radius: 25px;
+    font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
-    width: 100%; /* Botão ocupa toda a largura do formulário */
-    font-family: 'Anton', sans-serif; /* Fonte Anton */
-    letter-spacing: 1px; /* Espaçamento entre letras */
+    width: 85%;
+    margin: 0 auto;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    transition: filter 0.3s ease;
 }
 
 .cadastrar-button:hover {
-    transition: filter 0.3s ease;
-    filter: brightness(70%); 
+    filter: brightness(90%);
+}
+
+/* Link de Login */
+.logar {
+    text-align: center;
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+.logar a, span {
+    color: var(--branco);
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.logar a:hover {
+    color: var(--laranja);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .cadastro-container {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+    
+    #cadastro h2 {
+        font-size: 24px;
+    }
+    
+    .form-group input {
+        width: 90%;
+        margin-left: 1rem;
+    }
+    
+    #Google {
+        padding-right: 120px;
+    }
+}
+
+html, body {
+    scrollbar-width: none;
 }

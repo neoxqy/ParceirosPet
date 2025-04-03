@@ -1,19 +1,21 @@
 /* Seção de Login */
 #login {
     display: flex;
-    justify-content: flex-end; /* Alinhar o formulário à direita */
-    align-items: center;
+    justify-content: flex-end; 
     padding: 40px var(--padding-horizontal); /* Mantém o padding interno */
     background-image: url('/Imagem/backgroundLogin.jpg');
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
-    min-height: 135vh; /* Ocupa 100% da altura da viewport */
-    width: 100%; /* Ocupa 100% da largura da viewport */
-    margin: 0; /* Remove margens */
-    position: relative; /* Permite ajustes de posicionamento interno */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 135vh; 
+    width: 100%; 
+    margin: 0; 
+    position: relative; 
     top: 0; /* Garante que a imagem comece no topo da página */
     left: 0; /* Garante que a imagem comece na esquerda da página */
+}
+html, body {
+    scrollbar-width: none;
 }
 
 .login-container {
@@ -22,22 +24,25 @@
         #008040,   /* Tom mais claro de verde (topo) */
         #006936    /* Tom mais escuro de verde (base) */
     );
-    padding: 30px;
-    border-radius: 10px;
-    width: 400px; /* Largura do formulário */
+    padding: 20px;
+    border-radius: 35px;
+    width: 360px; /* Largura do formulário */
+    height: 520px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     color: var(--branco); /* Cor do texto dentro do container */
+    border-radius: 35px;
+    margin-top: 130px;
 }
 
 /* Cabeçalho do formulário */
 #login h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: var(--branco); /* Texto branco para contraste */
+    color: var(--branco); 
     text-align: center;
-    font-family: 'Anton', sans-serif; /* Fonte Anton */
-    text-transform: uppercase; /* Texto em maiúsculas */
-    letter-spacing: 2px; /* Espaçamento entre letras */
+    font-family: 'Anton', sans-serif; 
+    text-transform: uppercase; 
+    letter-spacing: 2px;
 }
 
 /* Formulário de Login */
@@ -45,6 +50,8 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    
+  
 }
 
 .form-group {
@@ -55,18 +62,19 @@
 
 .form-group label {
     font-size: 16px;
-    color: var(--branco); /* Texto branco para contraste */
+    color: var(--text-color); /* Texto branco para contraste */
     font-weight: bold;
     font-family: 'Anton', sans-serif; /* Fonte Anton */
     letter-spacing: 1px; /* Espaçamento entre letras */
 }
 
 .form-group input {
-    width: 100%;
+    width: 80%;
     padding: 12px;
     border: 1px solid #ccc;
+    margin-left: 2rem;
     border-radius: 25px; /* Bordas mais arredondadas */
-    font-size: 16px;
+    font-size: 21px;
     outline: none; /* Remove a borda padrão ao focar */
     transition: border-color 0.3s ease;
     font-family: 'Anton', sans-serif; /* Fonte Anton */
@@ -83,34 +91,86 @@
 }
 
 /* Ícones de login social */
+/* Seção Social - Versão Corrigida */
 .social-login {
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
 }
 
-.social-login p {
-    font-size: 14px;
-    color: var(--branco);
+.social-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin-bottom: 10px;
-    font-family: 'Anton', sans-serif; /* Fonte Anton */
-    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+.divider-line {
+    flex: 1;
+    max-width: 100px; /* Largura máxima para cada linha */
+    height: 1px;
+    background-color: rgb(229, 229, 229);
+}
+
+.divider-text {
+    padding: 0 10px;
+    color: var(--branco);
+    font-family: 'Anton', sans-serif;
+    font-size: 14px;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espaçamento entre os ícones */
+    width: 100%;
+    gap: 40px; /* Espaço igual ao das linhas */
+}
+
+.social-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px; /* Mesma largura das linhas */
+}
+
+.social-icon {
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .social-icon img {
-    width: 40px; /* Tamanho dos ícones */
-    height: 40px;
-    border-radius: 50%; /* Ícones redondos */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
 .social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Removendo estilos conflitantes */
+#Google, #phone {
+    padding: 0;
+    margin-top: 0;
+    width: auto;
+    padding-right: 0;
+}
+
+.social-icon img:hover {
     transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+.line-above {
+    width: 100px; /* Mesma largura das linhas superiores */
+    height: 1px;
+    background-color: rgb(229, 229, 229);
+    margin-bottom: 10px;
 }
 
 /* Botão de Entrar */
@@ -131,4 +191,48 @@
 
 .entrar-button:hover {
     background-color: #b36a3a; /* Cor mais escura no hover */
+}
+.cadastrar a, span {
+    color: var(--branco);
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.cadastrar{
+    padding-right: 0.5rem;
+    padding-top: 20px;
+}
+.cadastrar a:hover{
+    color: var(--laranja);
+}   
+.linha-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Google{
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    padding-right: 195px;
+}
+.linha {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.linha::before,
+.linha::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid rgb(229, 229, 229); /* Define a linha */
+}
+
+.espaco {
+    width: 50px; /* Define o espaço entre as linhas */
 }

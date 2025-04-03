@@ -54,3 +54,6 @@
     transition: filter 0.3s ease;
     filter: brightness(70%); 
 }
+html, body {
+    scrollbar-width: none;
+}
