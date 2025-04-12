@@ -24,11 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Verifica se é usuário comum
     $stmtUser = $conn->prepare("SELECT * FROM usuario WHERE email_usuario = ? AND senha_usuario = ?");
     $stmtUser->execute([$email, $senha_hash]);
+    $usuario = $stmtUser->fetch(PDO::FETCH_ASSOC);
 
     if ($stmtUser->rowCount() === 1) {
         session_start();
-        $_SESSION['usuario'] = $email;
-        header("Location: ../pages/home.html");
+        $_SESSION['usuario'] = $usuario['id_usuario'];
+        header("Location: ../pages/dados-pessoais.php");
         exit();
     } else {
         header("Location: ../pages/login.php?erro=Email+ou+senha+inválidos");
