@@ -3,7 +3,7 @@ class Conexao {
     private static $host = "localhost";
     private static $dbname = "parceirospets";
     private static $usuario = "root";
-    private static $senha = "";
+    private static $senha = "root";
 
     public static function conectar() {
         try {

@@ -1,17 +1,21 @@
 <?php
 require_once "conexao.php";
 
+$conn = Conexao::conectar();
+
 // Verifica se os campos existem
 if (
-    isset($_POST['nome_usuario']) && 
-    isset($_POST['cpf_usuario']) && 
+    isset($_POST['nome_usuario'])  && 
+    isset($_POST['cpf_usuario'])   && 
     isset($_POST['email_usuario']) && 
+    isset($_POST['telefone_usuario']) && 
     isset($_POST['senha_usuario'])
 ) {
     $nome = trim($_POST['nome_usuario']);
     $cpf = trim($_POST['cpf_usuario']);
     $email = trim($_POST['email_usuario']);
     $senha = trim($_POST['senha_usuario']);
+    $telefone = trim($_POST['telefone_usuario']);
 
     // Regex
     if (!preg_match("/^[A-Za-zÀ-ú\s]{3,}$/", $nome)) {
@@ -40,26 +44,21 @@ if (
     // Verifica se o e-mail já está cadastrado
     $sql_verifica = "SELECT * FROM usuario WHERE email_usuario = ?";
     $stmt_verifica = $conn->prepare($sql_verifica);
-    $stmt_verifica->bind_param("s", $email);
-    $stmt_verifica->execute();
-    $resultado = $stmt_verifica->get_result();
+    $stmt_verifica->execute([$email]);
 
-    if ($resultado->num_rows > 0) {
-
+    if ($stmt_verifica->rowCount() > 0) {
         // E-mail já existe
         header("Location: ../pages/cadastro.php?erro=E-mail já cadastrado");
         exit();
     }
 
-
-    // Inseri no banco de dados
-    $sql = "INSERT INTO usuario (nome_usuario, cpf_usuario, email_usuario, senha_usuario, data_criacao) 
-            VALUES (?, ?, ?, ?, NOW())";
+    // Insere no banco de dados
+    $sql = "INSERT INTO usuario (nome_usuario, cpf_usuario, email_usuario, senha_usuario, telefone_usuario, data_criacao) 
+            VALUES (?, ?, ?, ?, ?, NOW())";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss", $nome, $cpf, $email, $senhaHash);
 
-    if ($stmt->execute()) {
-        header("Location: ../pages/sucesso.php");
+    if ($stmt->execute([$nome, $cpf, $email, $senhaHash, $telefone])) {
+        header("Location: ../pages/login.php");
         exit();
     } else {
         header("Location: ../pages/cadastro.php?erro=Erro ao cadastrar");

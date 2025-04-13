@@ -34,6 +34,9 @@
                     <input type="text" id="cpf" name="cpf_usuario" placeholder="CPF" required>
                 </div>
                 <div class="form-group">
+                    <input type="telefone" id="telefone" name="telefone_usuario" placeholder="Telefone (apenas números)" required>
+                </div>
+                <div class="form-group">
                     <input type="email" id="email" name="email_usuario" placeholder="E-mail" required>
                 </div>
                 <div class="form-group">
