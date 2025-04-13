@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parceiros Pets - Adotar</title>
+    <link rel="stylesheet" href="../css/confirm-adocao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/accessibility.css">
+    <script src="../js/acessibilidade.js"></script>
+</head>
+<body>
+    <button id="accessibility-btn" aria-label="Ativar modo de acessibilidade">
+        <span>Acessibilidade</span>
+    </button>
+    <div class="bg"></div>
+
+    <div class="container">
+        <h1>Confirmação de Adoção</h1>
+        Ascendência
+        <form class="confirm-form" method="POST" action="../php/processa_adocao.php">
+            <h2>Confirma a sua adoção?</h2>
+            <div class="button-group">
+                <button type="submit" class="btn-sim">Sim</button>
+                <button type="button" class="btn-nao" onclick="cancelarAdocao()">Não</button>
+            </div>
+        </form>
+        
+    </div>
+
+    <script>
+    
+        function cancelarAdocao() {
+            alert("Adoção cancelada.");
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+</html>

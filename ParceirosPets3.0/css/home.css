@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--preto);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px var(--padding-horizontal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: var(--logo-size);
+  font-weight: bold;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header .nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--icon-size);
+}
+
+#hero {
+  background-image: url('../Imagem/home.png'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  text-align: left; 
+  color: var(--text-color);
+  padding-left: var(--padding-horizontal); 
+}
+
+#hero .hero-content {
+  
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px; 
+}
+
+#hero h1 {
+  font-family: 'Bevan', serif; 
+  font-weight: 400; 
+  font-size: 40px; 
+  line-height: 50px; 
+  letter-spacing: 0; 
+  text-transform: uppercase; 
+  margin-bottom: 25px; 
+}
+
+
+.cta-button {
+  background: linear-gradient(to right, var(--amarelo), var(--laranja)); 
+  font-family: Bevan;
+  color: var(--text-color);
+  padding: 15px 50px; 
+  text-decoration: none;
+  border-radius: 50px; 
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  display: inline-block; 
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: linear-gradient(to right, #e6b800, #b36a3a); 
+}
