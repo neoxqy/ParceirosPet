@@ -1,0 +1,417 @@
+.accessibility-mode {
+  display: none;
+}
+
+body.accessibility-active {
+  filter: contrast(170%) brightness(120%) saturate(85%);
+  background-color: #f0f4f8;
+  color: #1a2b3c;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+body.accessibility-active {
+  filter: grayscale(10%) contrast(190%);
+}
+
+body.accessibility-active.protanopia {
+  filter: hue-rotate(25deg) contrast(210%) saturate(75%) brightness(110%);
+  background-color: #f5f0fa;
+}
+
+body.accessibility-active.deuteranopia {
+  filter: hue-rotate(-25deg) contrast(210%) saturate(80%) brightness(115%);
+  background-color: #f0faf5;
+}
+
+body.accessibility-active.tritanopia {
+  filter: hue-rotate(100deg) contrast(200%) saturate(85%) brightness(120%);
+  background-color: #faf0f5;
+}
+
+body.accessibility-active.monochromatic {
+  filter: grayscale(100%) contrast(220%) brightness(110%);
+  background-color: #ececec;
+}
+
+body.accessibility-active.dyslexia p,
+body.accessibility-active.dyslexia span,
+body.accessibility-active.dyslexia li,
+body.accessibility-active.dyslexia a,
+body.accessibility-active.dyslexia h1,
+body.accessibility-active.dyslexia h2,
+body.accessibility-active.dyslexia h3,
+body.accessibility-active.dyslexia h4,
+body.accessibility-active.dyslexia h5,
+body.accessibility-active.dyslexia h6 {
+  font-family: "Open Dyslexic", Arial, sans-serif;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  font-weight: 800;
+  text-transform: none;
+}
+
+body.accessibility-active p,
+body.accessibility-active span,
+body.accessibility-active li,
+body.accessibility-active a,
+body.accessibility-active h1,
+body.accessibility-active h2,
+body.accessibility-active h3,
+body.accessibility-active h4,
+body.accessibility-active h5,
+body.accessibility-active h6 {
+  font-size: 1.8em;
+  line-height: 2;
+  font-weight: 800;
+  font-family: "Verdana", Arial, sans-serif;
+  text-shadow: 0 0 2px rgba(26, 43, 60, 0.15);
+  margin: 10px 0;
+}
+
+body.accessibility-active a {
+  color: #004080;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+  padding: 2px 5px;
+}
+
+body.accessibility-active a:hover,
+body.accessibility-active a:focus {
+  background-color: #ffeb99;
+  color: #1a2b3c;
+  outline: 3px solid #1a2b3c;
+  border-radius: 4px;
+}
+
+body.accessibility-active button {
+  background-color: #1a2b3c;
+  color: #f0f4f8;
+  border: 5px solid #f0f4f8;
+  padding: 15px 30px;
+  font-size: 1.8em;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(26, 43, 60, 0.2);
+}
+
+body.accessibility-active button:hover,
+body.accessibility-active button:focus {
+  background-color: #4a5d72;
+  outline: 4px solid #ffeb99;
+}
+
+body.accessibility-active *,
+body.accessibility-active *:hover,
+body.accessibility-active *:focus {
+  animation: none !important;
+  transition: none !important;
+  will-change: auto;
+}
+
+body.accessibility-active img {
+  filter: contrast(140%) brightness(115%) saturate(90%);
+  border: 2px solid #1a2b3c;
+  padding: 5px;
+  background-color: #f0f4f8;
+  max-width: 100%;
+}
+
+body.accessibility-active input,
+body.accessibility-active textarea,
+body.accessibility-active select {
+  font-size: 1.8em;
+  padding: 10px;
+  border: 3px solid #1a2b3c;
+  background-color: #f0f4f8;
+  color: #1a2b3c;
+  border-radius: 5px;
+}
+
+body.accessibility-active input:focus,
+body.accessibility-active textarea:focus,
+body.accessibility-active select:focus {
+  outline: 4px solid #ffeb99;
+  border-color: #1a2b3c;
+}
+
+#accessibility-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #0066cc;
+  color: #f0f4f8;
+  border: 3px solid #f0f4f8;
+  border-radius: 60px;
+  padding: 18px 30px;
+  font-size: 1.4em;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(0, 102, 204, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#accessibility-btn:hover {
+  background-color: #004d99;
+  transform: scale(1.05);
+}
+
+#accessibility-btn:focus {
+  outline: 4px solid #ffeb99;
+  transform: scale(1.05);
+}
+
+body.accessibility-active #accessibility-btn {
+  background-color: #1a2b3c;
+  border: 5px solid #f0f4f8;
+  font-size: 1.8em;
+  padding: 20px 35px;
+}
+
+#accessibility-btn::before {
+  content: "♿";
+  margin-right: 8px;
+}
+
+body.accessibility-active table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body.accessibility-active th,
+body.accessibility-active td {
+  border: 2px solid #1a2b3c;
+  padding: 15px;
+  font-size: 1.8em;
+  background-color: #f0f4f8;
+}
+
+body.accessibility-active.high-contrast {
+  background-color: #1a2b3c;
+  color: #f0f4f8;
+  filter: contrast(300%) brightness(100%);
+}
+
+body.accessibility-active.high-contrast a {
+  color: #00ccff;
+}
+
+body.accessibility-active.high-contrast button {
+  background-color: #f0f4f8;
+  color: #1a2b3c;
+  border-color: #f0f4f8;
+}
+
+@media (max-width: 480px) {
+  body.accessibility-active {
+    padding: 5px;
+  }
+
+  body.accessibility-active p,
+  body.accessibility-active span,
+  body.accessibility-active li,
+  body.accessibility-active a,
+  body.accessibility-active h1,
+  body.accessibility-active h2,
+  body.accessibility-active h3,
+  body.accessibility-active h4,
+  body.accessibility-active h5,
+  body.accessibility-active h6 {
+    font-size: 1.4em;
+    line-height: 1.8;
+    margin: 8px 0;
+  }
+
+  body.accessibility-active a {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    padding: 1px 3px;
+  }
+
+  body.accessibility-active button {
+    padding: 10px 20px;
+    font-size: 1.4em;
+    border-width: 3px;
+    border-radius: 8px;
+  }
+
+  body.accessibility-active input,
+  body.accessibility-active textarea,
+  body.accessibility-active select {
+    font-size: 1.4em;
+    padding: 8px;
+    border-width: 2px;
+  }
+
+  body.accessibility-active img {
+    border-width: 1px;
+    padding: 3px;
+  }
+
+  #accessibility-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-width: 2px;
+    border-radius: 40px;
+  }
+
+  body.accessibility-active #accessibility-btn {
+    padding: 15px 25px;
+    font-size: 1.4em;
+    border-width: 3px;
+  }
+
+  body.accessibility-active th,
+  body.accessibility-active td {
+    padding: 10px;
+    font-size: 1.4em;
+    border-width: 1px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body.accessibility-active {
+    padding: 8px;
+  }
+
+  body.accessibility-active p,
+  body.accessibility-active span,
+  body.accessibility-active li,
+  body.accessibility-active a,
+  body.accessibility-active h1,
+  body.accessibility-active h2,
+  body.accessibility-active h3,
+  body.accessibility-active h4,
+  body.accessibility-active h5,
+  body.accessibility-active h6 {
+    font-size: 1.6em;
+    line-height: 1.9;
+    margin: 9px 0;
+  }
+
+  body.accessibility-active a {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    padding: 2px 4px;
+  }
+
+  body.accessibility-active button {
+    padding: 12px 25px;
+    font-size: 1.6em;
+    border-width: 4px;
+    border-radius: 9px;
+  }
+
+  body.accessibility-active input,
+  body.accessibility-active textarea,
+  body.accessibility-active select {
+    font-size: 1.6em;
+    padding: 9px;
+    border-width: 2px;
+  }
+
+  body.accessibility-active img {
+    border-width: 2px;
+    padding: 4px;
+  }
+
+  #accessibility-btn {
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 25px;
+    font-size: 1.3em;
+    border-width: 3px;
+    border-radius: 50px;
+  }
+
+  body.accessibility-active #accessibility-btn {
+    padding: 18px 30px;
+    font-size: 1.6em;
+    border-width: 4px;
+  }
+
+  body.accessibility-active th,
+  body.accessibility-active td {
+    padding: 12px;
+    font-size: 1.6em;
+    border-width: 2px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  body.accessibility-active {
+    padding: 10px;
+  }
+
+  body.accessibility-active p,
+  body.accessibility-active span,
+  body.accessibility-active li,
+  body.accessibility-active a,
+  body.accessibility-active h1,
+  body.accessibility-active h2,
+  body.accessibility-active h3,
+  body.accessibility-active h4,
+  body.accessibility-active h5,
+  body.accessibility-active h6 {
+    font-size: 1.7em;
+    line-height: 2;
+    margin: 10px 0;
+  }
+
+  body.accessibility-active a {
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    padding: 2px 5px;
+  }
+
+  body.accessibility-active button {
+    padding: 14px 28px;
+    font-size: 1.7em;
+    border-width: 4px;
+    border-radius: 10px;
+  }
+
+  body.accessibility-active input,
+  body.accessibility-active textarea,
+  body.accessibility-active select {
+    font-size: 1.7em;
+    padding: 10px;
+    border-width: 3px;
+  }
+
+  body.accessibility-active img {
+    border-width: 2px;
+    padding: 5px;
+  }
+
+  #accessibility-btn {
+    bottom: 35px;
+    right: 35px;
+    padding: 16px 28px;
+    font-size: 1.4em;
+    border-width: 3px;
+    border-radius: 55px;
+  }
+
+  body.accessibility-active #accessibility-btn {
+    padding: 20px 32px;
+    font-size: 1.7em;
+    border-width: 5px;
+  }
+
+  body.accessibility-active th,
+  body.accessibility-active td {
+    padding: 14px;
+    font-size: 1.7em;
+    border-width: 2px;
+  }
+}
+

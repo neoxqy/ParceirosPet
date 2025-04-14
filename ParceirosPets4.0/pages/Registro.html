@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parceiros Pet's Dashboard</title>
+  <link rel="stylesheet" href="../css/Registro.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar"></div>
+    </header>
+  <div class="container">
+    
+    <main>
+      <section class="dashboard">
+        <div class="stats">
+          <div class="info-box">
+            <p>Cadastros: <span id="porcentagem-cadastros">0%</span></p>
+            <div class="progress-bar">
+              <div class="progress" id="barra-cadastros" style="width: 0%;"></div>
+            </div>
+
+            <p>Adoções: <span id="porcentagem-adocoes">0%</span></p>
+            <div class="progress-bar">
+              <div class="progress" id="barra-adocoes" style="width: 0%;"></div>
+            </div>
+
+            <p>Doações: <span id="porcentagem-doacoes">0%</span></p>
+            <div class="progress-bar">
+              <div class="progress" id="barra-doacoes" style="width: 0%;"></div>
+            </div>
+
+            <div class="visits-circle">
+              <p id="porcentagem-visitas">0%</p>
+              <p>Visitas</p>
+            </div>
+
+        </div>
+        <div class="chart">
+          <canvas id="petChart"></canvas>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="dot purple"></span>Visitas</span>
+            <span class="legend-item"><span class="dot yellow"></span>Cadastros</span>
+            <span class="legend-item"><span class="dot dark-purple"></span>Adoções</span>
+            <span class="legend-item"><span class="legend-dot pink"></span>Doações</span>
+          </div>
+        </div>
+        <div>
+            <button class="export-excel-btn" aria-label="Exportar para Excel">
+                <i class="fas fa-file-excel"></i> Exportar para Excel
+              </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    /// aqui ele lê os dados
+    /// lê a merda do json tlgd
+    /// talvez tenha um problema de dados do banco nao refletirem aqui, adocoes e doacoes refletem
+   fetch('../php/dados_dashboard.php')
+  .then(response => response.json())
+  .then(data => {
+    const ctx = document.getElementById('petChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Visitas', 'Cadastros', 'Adoções', 'Doações'],
+        datasets: [{
+          data: [data.visitas, data.usuarios, data.adocoes, data.doacoes],
+          backgroundColor: ['#AB47BC', '#FFCA28', '#5E35B1', '#F06292'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          }
+        }
+      }
+    });
+
+    // Atualza a porra dos campos com dados reais
+    document.getElementById('porcentagem-cadastros').innerText = `${data.usuarios}%`;
+    document.getElementById('barra-cadastros').style.width = `${data.usuarios}%`;
+
+    document.getElementById('porcentagem-adocoes').innerText = `${data.adocoes}%`;
+    document.getElementById('barra-adocoes').style.width = `${data.adocoes}%`;
+
+    document.getElementById('porcentagem-doacoes').innerText = `${data.doacoes}%`;
+    document.getElementById('barra-doacoes').style.width = `${data.doacoes}%`;
+
+    document.getElementById('porcentagem-visitas').innerText = `${data.visitas}%`;
+  });
+
+  </script>
+</body>
+</html>
